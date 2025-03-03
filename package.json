@@ -1,6 +1,6 @@
 {
-    "name": "app-service-hello-world",
-    "description": "Simple Hello World Node.js sample for Azure App Service",
+    "name": "node-js-dice-roller-nd",
+    "description": "Dice Roller on the Web, with Node.js",
     "version": "0.0.1",
     "private": true,
     "license": "MIT",

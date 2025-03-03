@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author:  Nicolas Delgado
+    Class:   Software Engineering
+    Description: Nick's BlackJack API  hecker
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="wdr.css">
+    <script src="wdr.js"></script>
+</head>
+
+<body>
+    <h2>Test RESTful API for Dice Roller</h2>
+    <button id="testApi">Test API</button>
+    <p id="response"></p>
+
+    <script>
+        document.getElementById('testApi').addEventListener('click', async () => {
+            try {
+                const response = await fetch('https://webdiceroller-b8cfdne0fcdjcuhw.centralus-01.azurewebsites.net/');
+                const data = await response.json();
+                document.getElementById('response').innerText = `API Response: ${JSON.stringify(data)}`;
+            } catch (error) {
+                document.getElementById('response').innerText = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+
+</html>
